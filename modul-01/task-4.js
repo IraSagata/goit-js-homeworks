@@ -8,11 +8,11 @@ if (message === null) {
   alert("ОПА");
 } else if (totalPrice > credits) {
   alert("Недостаточно средств на счету!");
+} else if (Number.isNaN(+message)) {
+  alert("Введіть число!");
 } else if (totalPrice <= credits) {
   alert(
     `Вы купили ${message} дроидов, на счету осталось ${credits -
       totalPrice} кредитов!`
   );
-} else if (Number.isNaN(+message)) {
-  alert("Введіть число!");
 }

@@ -8,7 +8,7 @@ if (message === null) {
 } else if (message === ADMIN_PASSWORD) {
   let message = `Добро пожаловать!`;
   alert(message);
-} else if (message !== ADMIN_PASSWORD) {
+} else {
   let message = "Доступ запрещен, неверный пароль!";
   alert(message);
 }
