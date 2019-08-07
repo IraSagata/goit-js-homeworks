@@ -1,14 +1,10 @@
 //Задание 6
 
 function checkForSpam(str) {
-  let stringToArrey = str.toLowerCase().split(" ");
-  for (let i = 0; i < stringToArrey.length; i++) {
-    let word = stringToArrey[i];
-    if (word == "spam" || word == "sale" || word == "[spam]") {
-      return true;
-    }
-  }
-  return false;
+  let stringToLowerCase = str.toLowerCase();
+  let a =
+    stringToLowerCase.includes("spam") || stringToLowerCase.includes("sale");
+  return a;
 }
 
 console.log(checkForSpam("Latest technology news")); // false

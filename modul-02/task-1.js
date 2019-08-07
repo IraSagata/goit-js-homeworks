@@ -26,5 +26,5 @@ console.log(users);
 // перед пользователем хранящимся в переменной insertBefore
 const userToInsert = "Kong";
 const insertBefore = "Jay";
-users.splice(insertBefore, 0, userToInsert);
+users.splice(users.indexOf(insertBefore), 0, userToInsert);
 console.log(users);

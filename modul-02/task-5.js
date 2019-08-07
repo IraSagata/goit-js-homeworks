@@ -2,7 +2,7 @@
 
 function formatString(string) {
   let lenghtOfString = string.length;
-  if (lenghtOfString >= 40) {
+  if (lenghtOfString > 40) {
     let makeNewString = string.slice(0, 40);
     string = makeNewString + "...";
   }
