@@ -5,7 +5,7 @@
 
 // Вызовы функции для проверки работоспособности твоей реализации.
 
-const products = [
+const appp = [
   { name: "Радар", price: 1300, quantity: 4 },
   { name: "Сканер", price: 2700, quantity: 3 },
   { name: "Дроид", price: 400, quantity: 7 },
@@ -19,6 +19,6 @@ function calculateTotalPrice(arr, productName) {
     }
   }
 }
-console.log(calculateTotalPrice(products, "Радар")); // 5200
+console.log(calculateTotalPrice(appp, "Радар")); // 5200
 
-console.log(calculateTotalPrice(products, "Дроид")); // 2800
+console.log(calculateTotalPrice(appp, "Дроид")); // 2800
