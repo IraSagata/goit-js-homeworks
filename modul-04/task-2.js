@@ -7,7 +7,7 @@ const inventory = {
     inventory.items.push(itemName);
   },
   remove(itemName) {
-    this.items = inventory.items.filter(item => item !== itemName);
+    inventory.items = inventory.items.filter(item => item !== itemName);
   }
 };
 
