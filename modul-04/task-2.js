@@ -1,27 +1,29 @@
 //Задание 2
 // Исправь ошибки которые будут в консоли, чтобы скрипт заработал.
 "use strict";
+
 const inventory = {
   items: ["Монорельса", "Фильтр"],
   add(itemName) {
-    inventory.items.push(itemName);
+    this.items.push(itemName);
   },
   remove(itemName) {
-    inventory.items = inventory.items.filter(item => item !== itemName);
+    this.items = this.items.filter(item => item !== itemName);
   }
 };
 
-const invokeInventoryOperation = function(itemName, inventoryAction) {
+const invokeInventoryOperation = function(object, inventoryAction, itemName) {
   console.log(`Invoking ${inventoryAction.name} opeartion on ${itemName}`);
-  inventoryAction(itemName);
+  const action = inventoryAction.bind(object, itemName);
+  action();
 };
 
-invokeInventoryOperation("Аптечка", inventory.add);
+invokeInventoryOperation(inventory, inventory.add, "Аптечка");
 // Invoking add opeartion on Аптечка
 
 console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
 
-invokeInventoryOperation("Фильтр", inventory.remove);
+invokeInventoryOperation(inventory, inventory.remove, "Фильтр");
 // Invoking remove opeartion on Фильтр
 
 console.log(inventory.items); // ['Монорельса', 'Аптечка']
