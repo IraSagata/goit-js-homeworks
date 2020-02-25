@@ -29,6 +29,7 @@ closeButton.addEventListener("click", () => {
   newLighthbox.classList.remove("is-open");
   imageLighthbox.src = "";
 });
+
 window.addEventListener("keydown", function(e) {
   if (e.keyCode === 27) {
     newLighthbox.classList.remove("is-open");
